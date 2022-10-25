@@ -1,4 +1,2 @@
-# Welcome to Math-Util repository
-#### Connect me via dohuuduc315@gmail.com
-
-#### Copyright &#169; 2022 huuduc
+# Welcome to Inventory Management
+#### Connect me via htrung1109@gmail.com
