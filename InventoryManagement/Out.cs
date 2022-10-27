@@ -234,5 +234,31 @@ namespace InventoryManagement
         {
             LoadData();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
+            dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
+            var db = new InventoryManagementContext();
+            var list1 = db.Khos.Select(p => new { Text = p.MsKho, Value = p.TenKho }).ToList();
+            comboBox1.ValueMember = "Text";
+            comboBox1.DisplayMember = "Value";
+            comboBox1.DataSource = (list1.ToArray());
+            var list2 = db.NhanViens.Select(p => new { Text = p.Msvn, Value = p.TenNv }).ToList();
+            comboBox2.ValueMember = "Text";
+            comboBox2.DisplayMember = "Value";
+            comboBox2.DataSource = (list1.ToArray());
+            var list3 = db.MatHangs.Select(p => new { Text = p.MsMatHang, Value = p.TenHang }).ToList();
+            comboBox3.ValueMember = "Text";
+            comboBox3.DisplayMember = "Value";
+            comboBox3.DataSource = (list1.ToArray());
+            textBox8.Text = dataGridView1.Rows[e.RowIndex].Cells["Column6"].Value.ToString();
+        }
     }
 }

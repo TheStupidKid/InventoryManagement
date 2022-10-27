@@ -50,8 +50,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.update_mh_btn = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,8 +63,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.update_mh_btn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.delete_mh_btn = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.delete_mh_btn = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
@@ -244,6 +243,7 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(462, 410);
             this.dataGridView1.TabIndex = 100;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -329,13 +329,6 @@
             this.label22.TabIndex = 89;
             this.label22.Text = "Mat Hang";
             // 
-            // sqlCommand1
-            // 
-            this.sqlCommand1.CommandTimeout = 30;
-            this.sqlCommand1.Connection = null;
-            this.sqlCommand1.Notification = null;
-            this.sqlCommand1.Transaction = null;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.update_mh_btn);
@@ -351,6 +344,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(900, 442);
             this.panel3.TabIndex = 74;
+            // 
+            // update_mh_btn
+            // 
+            this.update_mh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.update_mh_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.update_mh_btn.Image = global::InventoryManagement.Properties.Resources.Text_Edit_icon;
+            this.update_mh_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.update_mh_btn.Location = new System.Drawing.Point(54, 219);
+            this.update_mh_btn.Name = "update_mh_btn";
+            this.update_mh_btn.Size = new System.Drawing.Size(269, 75);
+            this.update_mh_btn.TabIndex = 109;
+            this.update_mh_btn.Text = "Sua Mat Hang";
+            this.update_mh_btn.UseVisualStyleBackColor = false;
+            this.update_mh_btn.Click += new System.EventHandler(this.update_mh_btn_Click);
             // 
             // dataGridView2
             // 
@@ -452,20 +459,6 @@
             this.label4.TabIndex = 101;
             this.label4.Text = "Mat Hang";
             // 
-            // update_mh_btn
-            // 
-            this.update_mh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.update_mh_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.update_mh_btn.Image = global::InventoryManagement.Properties.Resources.Text_Edit_icon;
-            this.update_mh_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.update_mh_btn.Location = new System.Drawing.Point(54, 219);
-            this.update_mh_btn.Name = "update_mh_btn";
-            this.update_mh_btn.Size = new System.Drawing.Size(269, 75);
-            this.update_mh_btn.TabIndex = 109;
-            this.update_mh_btn.Text = "Sua Mat Hang";
-            this.update_mh_btn.UseVisualStyleBackColor = false;
-            this.update_mh_btn.Click += new System.EventHandler(this.update_mh_btn_Click);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.delete_mh_btn);
@@ -481,6 +474,20 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(900, 445);
             this.panel5.TabIndex = 75;
+            // 
+            // delete_mh_btn
+            // 
+            this.delete_mh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.delete_mh_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.delete_mh_btn.Image = global::InventoryManagement.Properties.Resources.icons8_cancel_filled_24__2_;
+            this.delete_mh_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.delete_mh_btn.Location = new System.Drawing.Point(76, 232);
+            this.delete_mh_btn.Name = "delete_mh_btn";
+            this.delete_mh_btn.Size = new System.Drawing.Size(271, 77);
+            this.delete_mh_btn.TabIndex = 117;
+            this.delete_mh_btn.Text = "Xoa Mat Hang";
+            this.delete_mh_btn.UseVisualStyleBackColor = false;
+            this.delete_mh_btn.Click += new System.EventHandler(this.delete_mh_btn_Click);
             // 
             // dataGridView3
             // 
@@ -582,20 +589,6 @@
             this.label9.Size = new System.Drawing.Size(95, 22);
             this.label9.TabIndex = 109;
             this.label9.Text = "Mat Hang";
-            // 
-            // delete_mh_btn
-            // 
-            this.delete_mh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.delete_mh_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.delete_mh_btn.Image = global::InventoryManagement.Properties.Resources.icons8_cancel_filled_24__2_;
-            this.delete_mh_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_mh_btn.Location = new System.Drawing.Point(76, 232);
-            this.delete_mh_btn.Name = "delete_mh_btn";
-            this.delete_mh_btn.Size = new System.Drawing.Size(271, 77);
-            this.delete_mh_btn.TabIndex = 117;
-            this.delete_mh_btn.Text = "Xoa Mat Hang";
-            this.delete_mh_btn.UseVisualStyleBackColor = false;
-            this.delete_mh_btn.Click += new System.EventHandler(this.delete_mh_btn_Click);
             // 
             // textBox12
             // 

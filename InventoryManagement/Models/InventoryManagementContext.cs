@@ -31,6 +31,7 @@ namespace InventoryManagement.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
+
                 var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
                 optionsBuilder.UseSqlServer(config.GetConnectionString("ADO"));
             }

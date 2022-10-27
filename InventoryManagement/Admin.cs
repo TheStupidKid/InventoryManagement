@@ -27,21 +27,18 @@ namespace InventoryManagement
         {
             Staff staff = new Staff();
             staff.Show();
-            this.Hide();
         }
 
         private void Don_Click(object sender, EventArgs e)
         {
             Home home = new Home();
             home.Show();
-            this.Hide();
         }
 
         private void mathang_Click(object sender, EventArgs e)
         {
             Item item = new Item();
             item.Show();
-            this.Hide();
         }
     }
 }

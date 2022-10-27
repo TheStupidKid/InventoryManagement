@@ -36,7 +36,7 @@ namespace InventoryManagement
             var db = new InventoryManagementContext();
             var _check = db.NhanViens.Where(x => x.TaiKhoan.Equals(_username) && x.MatKhau.Equals(_password) && x.RoleId == 0).FirstOrDefault();
             var _checknv = db.NhanViens.Where(x => x.TaiKhoan.Equals(_username) && x.MatKhau.Equals(_password) && x.RoleId == 1).FirstOrDefault();
-            if (_check != null )
+            if (_check != null)
             {
                 Admin admin = new Admin();
                 admin.Show();

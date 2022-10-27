@@ -63,6 +63,8 @@ namespace InventoryManagement
                 dataGridView2.Rows.Add(item.Msvn, item.TaiKhoan, item.MatKhau, item.TenNv, item.Tuoi, item.Sdt);
                 dataGridView3.Rows.Add(item.Msvn, item.TaiKhoan, item.MatKhau, item.TenNv, item.Tuoi, item.Sdt);
             }
+
+
         }
         private void Staff_Load(object sender, EventArgs e)
         {
@@ -83,6 +85,7 @@ namespace InventoryManagement
             dt.TenNv = textBox5.Text;
             dt.Tuoi = textBox4.Text;
             dt.Sdt = textBox3.Text;
+            dt.RoleId = 1;
             var db = new InventoryManagementContext();
             var checkid = db.NhanViens.Where(x => x.Msvn.Equals(id)).FirstOrDefault();
             db.NhanViens.Add(dt);

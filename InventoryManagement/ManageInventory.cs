@@ -15,8 +15,6 @@ namespace InventoryManagement
 {
     public partial class ManageInventory : Form
     {
-        public static NhanVien  _User = new NhanVien();
-        public static NhanVien _Admin = new NhanVien();
         public ManageInventory()
         {
             InitializeComponent();
@@ -222,5 +220,6 @@ namespace InventoryManagement
                 dataGridView3.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
             }
         }
+
     }
 }

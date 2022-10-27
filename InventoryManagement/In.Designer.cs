@@ -157,6 +157,12 @@
             this.Don = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel8.SuspendLayout();
@@ -172,6 +178,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -234,11 +242,11 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.dataGridView5.Location = new System.Drawing.Point(352, 29);
+            this.dataGridView5.Location = new System.Drawing.Point(352, 21);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 29;
-            this.dataGridView5.Size = new System.Drawing.Size(805, 533);
+            this.dataGridView5.Size = new System.Drawing.Size(88, 454);
             this.dataGridView5.TabIndex = 64;
             // 
             // dataGridViewTextBoxColumn13
@@ -757,7 +765,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(214, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1181, 592);
+            this.panel1.Size = new System.Drawing.Size(1373, 592);
             this.panel1.TabIndex = 41;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -898,8 +906,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(813, 531);
+            this.dataGridView1.Size = new System.Drawing.Size(892, 531);
             this.dataGridView1.TabIndex = 54;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -972,7 +981,7 @@
             this.panel3.Controls.Add(this.label15);
             this.panel3.Location = new System.Drawing.Point(214, 187);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1177, 587);
+            this.panel3.Size = new System.Drawing.Size(1369, 587);
             this.panel3.TabIndex = 69;
             // 
             // comboBox4
@@ -1187,7 +1196,7 @@
             this.panel5.Controls.Add(this.label22);
             this.panel5.Location = new System.Drawing.Point(217, 177);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1173, 599);
+            this.panel5.Size = new System.Drawing.Size(1365, 599);
             this.panel5.TabIndex = 70;
             // 
             // comboBox7
@@ -1472,11 +1481,82 @@
             this.pictureBox4.TabIndex = 68;
             this.pictureBox4.TabStop = false;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
+            this.panel9.Controls.Add(this.button1);
+            this.panel9.Controls.Add(this.label27);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Controls.Add(this.label28);
+            this.panel9.Controls.Add(this.pictureBox2);
+            this.panel9.Location = new System.Drawing.Point(1400, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(187, 140);
+            this.panel9.TabIndex = 110;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button1.Location = new System.Drawing.Point(33, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 29);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Mat Hang";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(21, 83);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(143, 18);
+            this.label27.TabIndex = 71;
+            this.label27.Text = "Quan Li Mat Hang";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button3.Location = new System.Drawing.Point(21, 205);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 41);
+            this.button3.TabIndex = 70;
+            this.button3.Text = "Don Hang";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(53, 173);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(156, 18);
+            this.label28.TabIndex = 69;
+            this.label28.Text = "Kiem Tra Don Hang";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
+            this.pictureBox2.Image = global::InventoryManagement.Properties.Resources._200_2006680_the_twin_oaks_warehouse_management_system_inventory_menegment;
+            this.pictureBox2.Location = new System.Drawing.Point(32, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(129, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 68;
+            this.pictureBox2.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1393, 801);
+            this.ClientSize = new System.Drawing.Size(1697, 801);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label24);
@@ -1511,6 +1591,9 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1649,5 +1732,11 @@
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

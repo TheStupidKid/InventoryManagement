@@ -939,9 +939,9 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel3);
             this.Name = "Staff";
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);

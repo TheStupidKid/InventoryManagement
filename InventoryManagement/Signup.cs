@@ -36,6 +36,7 @@ namespace InventoryManagement
             NhanVien dt = new NhanVien();
             dt.TaiKhoan = textBox1.Text;
             dt.MatKhau = textBox2.Text;
+            dt.RoleId = 1;
             db.NhanViens.Add(dt);
             if (_repasssword != _password)
             {

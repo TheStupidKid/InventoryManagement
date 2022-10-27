@@ -1,4 +1,5 @@
-﻿using InventoryManagement.Models;
+﻿
+using InventoryManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,8 @@ namespace InventoryManagement
         public void LoadData()
         {
             dataGridView1.Rows.Clear();
-            //dataGridView2.Rows.Clear();
-            //dataGridView3.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            dataGridView3.Rows.Clear();
             List<MatHang> list = new List<MatHang>();
             using (InventoryManagementContext context = new InventoryManagementContext())
             {
@@ -113,11 +114,11 @@ namespace InventoryManagement
                 return;
             }
             update_mh_btn.Enabled = false;
-            int id = int.Parse(textBox2.Text);
+            int id = int.Parse(textBox4.Text);
             var db = new InventoryManagementContext();
             var obj = db.MatHangs.Where(x => x.MsMatHang == id).FirstOrDefault();
-            obj.MsLoaiHang = int.Parse(comboBox1.SelectedValue.ToString());
-            obj.TenHang = textBox2.Text;
+            obj.MsLoaiHang = int.Parse(comboBox2.SelectedValue.ToString());
+            obj.TenHang = textBox3.Text;
             db.MatHangs.Update(obj);
             db.SaveChanges();
             MessageBox.Show("Update thanh cong don :" + id);
@@ -201,6 +202,17 @@ namespace InventoryManagement
                 dataGridView2.Rows.Add(item.MsMatHang, item.MsLoaiHang, item.TenHang);
                 dataGridView3.Rows.Add(item.MsMatHang, item.MsLoaiHang, item.TenHang);
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
+            var db = new InventoryManagementContext();
+            var list1 = db.LoaiHangs.Select(p => new { Text = p.MsLoaiHang, Value = p.TenLoaiHang }).ToList();
+            comboBox1.ValueMember = "Text";
+            comboBox1.DisplayMember = "Value";
+            comboBox1.DataSource = (list1.ToArray());
+            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["Column3"].Value.ToString();
         }
     }
 }
